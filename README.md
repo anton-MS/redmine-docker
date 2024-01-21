@@ -7,6 +7,9 @@ https://www.redmine.org/projects/redmine/wiki/HowTo_Install_Redmine_50x_on_Ubunt
 ```bash
 git clone https://github.com/anton-MS/redmine-docker.git
 ```
+```bash
+cd redmine-docker
+```
 2. Редагуємо IP-адресу, з якою ви будете заходити в redmine.conf.
 
 3. Запускаємо Docker Compose, вказавши 2 сервіси (ця команда виводить логи білду):
@@ -22,6 +25,8 @@ docker-compose -f redmine-compose.yaml up -d
 Тому поки так:
 ```bash
 docker exec -it (ID контейнера my-redmine) bash
+```
+```bash
 RAILS_ENV=production bundle exec rake db:migrate
 ```
 5. Тепер можете бачити redmine на локалхості:
