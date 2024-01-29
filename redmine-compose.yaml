@@ -17,6 +17,8 @@ services:
       - 80:80
     depends_on:
       - mysql
+    restart: always
+    command: ["bash", "-c", "RAILS_ENV=production bundle exec rake db:migrate"]
 
 
 
